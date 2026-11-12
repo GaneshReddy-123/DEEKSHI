@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday BUNNU ❤️</title>
+
+<style>
+
+/* GENERAL DESIGN */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffc0cb, #d8b4fe);
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.page {
+    display: none;
+}
+
+#home {
+    display: block;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 35px 25px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px #0002;
+    animation: appear 0.8s ease;
+}
+
+h1 {
+    color: #e84393;
+    font-size: 35px;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #9b59b6;
+    margin: 20px 0;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+button {
+    background: linear-gradient(45deg, #e84393, #9b59b6);
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    margin: 15px 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.emoji {
+    font-size: 60px;
+    margin: 20px;
+}
+
+.gift {
+    font-size: 110px;
+    cursor: pointer;
+    margin: 25px;
+    animation: bounce 1.5s infinite;
+}
+
+/* PHOTO GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 4px solid #ffc0cb;
+    box-shadow: 0 5px 15px #0002;
+}
+
+/* SPECIAL MESSAGE */
+
+.letter {
+    background: #fff0f5;
+    padding: 25px;
+    border-radius: 20px;
+    color: #713b69;
+    font-size: 17px;
+    line-height: 2;
+    text-align: left;
+    white-space: pre-line;
+}
+
+/* ANIMATIONS */
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE VIEW */
+
+@media(max-width: 600px) {
+    h1 {
+        font-size: 27px;
+    }
+
+    .gallery img {
+        height: 160px;
+    }
+
+    .container {
+        padding: 25px 15px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1: BIRTHDAY WISHES -->
+
+<section class="page" id="home">
+
+<div class="container">
+
+    <div class="emoji">🎈🎂🎈</div>
+
+    <h1>Happy Birthday BUNNU!</h1>
+
+    <h2>🥳 Today Is Your Special Day 🥳</h2>
+
+    <p>
+        Wishing you endless happiness,
+        unlimited smiles and beautiful memories.
+    </p>
+
+    <p>
+        You are not just a friend,
+        you are my BEST BEST FRIEND! ❤️
+    </p>
+
+    <h2>Stay Happy Always! 🌸</h2>
+
+    <h3>With Best Wishes - GANESH</h3>
+
+    <button onclick="showPage('surprise')">
+        Open Your Surprise 🎁
+    </button>
+
+</div>
+</section>
+
+
+<!-- PAGE 2: SURPRISE -->
+
+<section class="page" id="surprise">
+
+<div class="container">
+
+    <h1>Hey BUNNU! ❤️</h1>
+
+    <h2>I Have Something Special For You!</h2>
+
+    <div class="gift" onclick="openGift()">🎁</div>
+
+    <p id="surpriseText">
+        Click the gift box to open your surprise!
+    </p>
+
+    <button onclick="showPage('gallery')">
+        See Our Memories 📸
+    </button>
+
+    <br>
+
+    <button onclick="showPage('home')">
+        ⬅ Back
+    </button>
+
+</div>
+</section>
+
+
+<!-- PAGE 3: 10 PHOTOS -->
+
+<section class="page" id="gallery">
+
+<div class="container">
+
+    <h1>Our Beautiful Memories 📸</h1>
+
+    <h2>10 Special Moments ❤️</h2>
+
+    <div class="gallery">
+
+        <img src="photo1.jpg" alt="Memory 1">
+
+        <img src="photo2.jpg" alt="Memory 2">
+
+        <img src="photo3.jpg" alt="Memory 3">
+
+        <img src="photo4.jpg" alt="Memory 4">
+
+        <img src="photo5.jpg" alt="Memory 5">
+
+        <img src="photo6.jpg" alt="Memory 6">
+
+        <img src="photo7.jpg" alt="Memory 7">
+
+        <img src="photo8.jpg" alt="Memory 8">
+
+        <img src="photo9.jpg" alt="Memory 9">
+
+        <img src="photo10.jpg" alt="Memory 10">
+
+    </div>
+
+    <p>
+        Every picture has a memory.
+        Every memory has a beautiful story. ❤️
+    </p>
+
+    <button onclick="showPage('message')">
+        Read My Special Message 💌
+    </button>
+
+    <br>
+
+    <button onclick="showPage('surprise')">
+        ⬅ Back
+    </button>
+
+</div>
+</section>
+
+
+<!-- PAGE 4: SPECIAL MESSAGE -->
+
+<section class="page" id="message">
+
+<div class="container">
+
+    <div class="emoji">💌🌸❤️</div>
+
+    <h1>Dear BUNNU!</h1>
+
+    <h2>A Special Message From GANESH</h2>
+
+    <div class="letter">
+
+Happy Birthday BUNNU! 🥳
+
+I don't know how to explain how special
+you are as my best friend.
+
+Thank you for being part of my life.
+Thank you for all the funny moments,
+conversations, memories and happiness.
+
+Sometimes we laugh, sometimes we fight,
+sometimes we tease each other.
+
+But every moment of our friendship
+is special to me.
+
+I wish you achieve everything you dream of.
+
+May your life always be filled with happiness,
+success and beautiful memories.
+
+Never stop smiling.
+Keep being the wonderful person you are.
+
+I hope this birthday brings you
+lots of happiness.
+
+Once again, HAPPY BIRTHDAY BUNNU! 🎂❤️
+
+Your Best Best Friend,
+
+GANESH ❤️
+
+    </div>
+
+    <h2>Forever Best Friends! 🫂</h2>
+
+    <button onclick="showPage('home')">
+        Back To Beginning 🏠
+    </button>
+
+</div>
+</section>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// PAGE NAVIGATION
+
+function showPage(pageId) {
+
+    let pages = document.querySelectorAll(".page");
+
+    pages.forEach(function(page) {
+        page.style.display = "none";
+    });
+
+    document.getElementById(pageId).style.display = "block";
+
+    window.scrollTo(0, 0);
+}
+
+
+// OPEN GIFT SURPRISE
+
+function openGift() {
+
+    let gift = document.querySelector(".gift");
+
+    let message = document.getElementById("surpriseText");
+
+    gift.innerHTML = "🎉🎊🎉";
+
+    message.innerHTML = `
+        <h2>Surprise BUNNU! 🥳</h2>
+
+        You are an amazing best friend! ❤️
+
+        <br><br>
+
+        Thank you for all the beautiful memories.
+
+        <br><br>
+
+        Keep smiling and enjoy your birthday! 🎂
+
+    `;
+
+    gift.style.animation = "none";
+}
+
+</script>
+
+</body>
+</html>
